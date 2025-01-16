@@ -5,6 +5,6 @@ services:
     ports:
       - "9000:9000"
     environment:
-      API_URL: https://your-api-url.render.com/
+      API_URL: https://cobalt-4zjz.onrender.com/
       JWT_SECRET: b302acba0a64619dc9ab874800839e7f
       API_PORT: 9000
