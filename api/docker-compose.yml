@@ -1,10 +1,18 @@
-version: "3"
 services:
-  cobalt:
-    image: imput/cobalt:latest
-    ports:
-      - "9000:9000"
-    environment:
-      API_URL: https://cobalt-4zjz.onrender.com/
-      JWT_SECRET: b302acba0a64619dc9ab874800839e7f
-      API_PORT: 9000
+  - type: web
+    name: cobalt-api
+    env: docker
+    plan: starter
+    dockerfilePath: ./api/Dockerfile
+    envVars:
+      API_URL: https://cobalt-4zjz.onrender.com/api
+      # Add other environment variables as needed
+
+  - type: web
+    name: cobalt-web
+    env: docker
+    plan: starter
+    dockerfilePath: ./web/Dockerfile
+    envVars:
+      REACT_APP_API_URL: https://cobalt-4zjz.onrender.com/api
+      # Add other environment variables as needed
