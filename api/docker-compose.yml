@@ -1,0 +1,10 @@
+version: "3"
+services:
+  cobalt:
+    image: imput/cobalt:latest
+    ports:
+      - "9000:9000"
+    environment:
+      API_URL: https://your-api-url.render.com/
+      JWT_SECRET: b302acba0a64619dc9ab874800839e7f
+      API_PORT: 9000
